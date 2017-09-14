@@ -29,8 +29,8 @@ class CombatHUD extends \pocketmine\plugin\PluginBase implements \pocketmine\eve
 		$cl = $this->getServer()->getPluginManager()->getPlugin("CombatLogger");
 		$timeleft = $cl->getTagDuration($player);
 		$player->sendPopup(
-					"§l§cYou are now engaged in combat!\n".
-					"§r§bTime remaining: §a".$timeleft
+					"§l§aYou are now engaged in combat!\n".
+					"§l§bTime remaining: §3".$timeleft
 				  );
 	}
 }
