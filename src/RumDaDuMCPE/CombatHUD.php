@@ -20,13 +20,13 @@ class CombatHUD extends \pocketmine\plugin\PluginBase implements \pocketmine\eve
 	}
 
 	public function playerIsInCombat(\pocketmine\Player $player) : bool {
-		$cl = $this->getServer()->getPluginManager()->getPlugin("CombatLogger");
+		$cl = $this->getServer()->getPluginManager()->getPlugin("VMCombatLogger");
 		if ($cl->isTagged($player)) return true;
 		return false;
 	}
 
 	public function sendHUD(\pocketmine\Player $player) {
-		$cl = $this->getServer()->getPluginManager()->getPlugin("CombatLogger");
+		$cl = $this->getServer()->getPluginManager()->getPlugin("VMCombatLogger");
 		$timeleft = $cl->getTagDuration($player);
 		$player->sendPopup(
 					"§l§aYou are now engaged in combat!\n".
